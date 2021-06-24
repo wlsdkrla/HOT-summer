@@ -2,29 +2,21 @@
 using namespace sf;
 
 int main() {
+	
 	RenderWindow window(sf::VideoMode(500, 500), "WINDOW");
+	//절대 사이즈가 없다.
+	//texture의 사이즈를 그대로 가져오기때문에 이를 줄이거나 늘릴수 있음.
 	
-	//사각형 오브젝트
-	//사이즈 100.f,100.f
-	//색상은 그린
-	//위치는 100.f,100.f
-	RectangleShape rs;
-	
-	//Vector2f = float형 자료형 두개 짜리
-	rs.setSize(Vector2f(100.f,100.f));
-	rs.setFillColor(Color::Green);
-	rs.setPosition(Vector2f(250.f, 250.f));
-	
-	//오브젝트의 중심을 set하는 함수
-	rs.setOrigin(rs.getSize() / 2.f);
-	
+	Sprite sp;
+	Texture tx;
+	tx.loadFromFile("Textures/t.jpg");
+	sp.setScale(0.3f, 0.3f);
+	sp.setOrigin(tx.getSize().x / 2.f, tx.getSize().y / 2.f);
+	sp.setTexture(tx);
+	sp.setPosition(250.f,250.f);
 	while (window.isOpen()) {
 		window.clear();
-		rs.setPosition(rs.getPosition().x+0.005f, rs.getPosition().y);
-		//rs를 윈도우에 그려라.
-		
-		window.draw(rs);
-		//윈도우에 그린 결과물을 출력하라.
+		window.draw(sp);
 		window.display();
 	}
 }
