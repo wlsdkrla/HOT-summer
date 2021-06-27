@@ -3,18 +3,17 @@
 #include <vector>
 #include <iostream>
 using namespace sf;
-
 using namespace std;
 int main() {
 
 	RenderWindow window(sf::VideoMode(500, 500), "WINDOW");
-	window.setFramerateLimit(300);
+	window.setFramerateLimit(60);
 
 	vector<Texture>txVector;
 	Texture tx;
 	char name[50];
 	for (int i = 1; i < 7; ++i) {
-		sprintf(name, "Textures/pacman/%d.jpg", i);
+		sprintf(name, "Textures/mons/M%d.jpg", i);
 		tx.loadFromFile(name);
 		txVector.push_back(tx);
 	}
@@ -40,7 +39,7 @@ int main() {
 	
 
 	
-		if (clock.getElapsedTime().asSeconds() > 0.5f) {
+		if (clock.getElapsedTime().asSeconds() > 0.1f) {
 
 			sp.setTexture(txVector.data()[keyFrameTime % txVector.size()]);
 			++keyFrameTime;
