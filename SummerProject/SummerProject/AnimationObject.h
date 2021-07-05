@@ -3,19 +3,25 @@
 class AnimationObject : public Object
 {
 public:
+
 	AnimationObject();
 	virtual ~AnimationObject();
-private:
+
+
+protected:
+
 	vector<Texture*> vAnimation;
-	
-	size_t keyframe = 0;
-	float elapsedTime;
+	size_t keyFrame = 0;
+
+	float elapsedTime = 0.f;
+
 private:
-	virtual void Init() = 0;
+
+	virtual void Init();
 
 public:
 
-	virtual void Destroy() = 0;
-	virtual void Updata(const float& deltaTime) = 0;
-};
+	virtual void Destroy();
 
+	virtual void Update(const float& deltaTime);
+};

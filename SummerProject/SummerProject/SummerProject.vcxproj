@@ -142,16 +142,42 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AnimationObject.cpp" />
-    <ClCompile Include="Engine.cpp" />
-    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="AnimationObject.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="BMCharactor.cpp" />
+    <ClCompile Include="Charactor.cpp" />
+    <ClCompile Include="CharactorScene.cpp" />
+    <ClCompile Include="Engine.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="M1Charactor.cpp" />
+    <ClCompile Include="Object.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="pacman.cpp" />
+    <ClCompile Include="PMCharactor.cpp" />
+    <ClCompile Include="scene.cpp" />
+    <ClCompile Include="score.cpp" />
+    <ClCompile Include="scoreScene.cpp" />
+    <ClCompile Include="YMCharactor.cpp" />
     <ClCompile Include="소스.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimationObject.h" />
+    <ClInclude Include="BMCharactor.h" />
+    <ClInclude Include="Charactor.h" />
+    <ClInclude Include="CharactorScene.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="M1Charactor.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="pacman.h" />
+    <ClInclude Include="PMCharactor.h" />
+    <ClInclude Include="scene.h" />
+    <ClInclude Include="score.h" />
+    <ClInclude Include="scoreScene.h" />
+    <ClInclude Include="YMCharactor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

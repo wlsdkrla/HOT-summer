@@ -25,11 +25,44 @@
     <Filter Include="소스 파일\01.Object\01.AnimationObject">
       <UniqueIdentifier>{ed7eac67-95eb-4eb8-a84e-53209baa9644}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\02.Sence">
+      <UniqueIdentifier>{7e783ceb-cd4f-4415-a429-931ac29605c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\99.common">
+      <UniqueIdentifier>{b8967c9b-b2db-490c-9280-aa0fc119cc43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\00.main">
+      <UniqueIdentifier>{a1b7c2a5-e20c-4c46-bb60-21c433032c72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Object\02.Monsertcharactor">
+      <UniqueIdentifier>{3959fe4c-c5c6-4f1e-bafe-026f7a86f591}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Object\02.Monsertcharactor\00.charactor">
+      <UniqueIdentifier>{b0143ac3-0a06-4ca1-b0c4-1062614faa79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Object\02.Monsertcharactor\01.RMCharator">
+      <UniqueIdentifier>{ac1b1390-2657-454a-9cf1-ee53ffbc1d91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Object\02.Monsertcharactor\02.YMCharactor">
+      <UniqueIdentifier>{b4488465-d948-4862-90f8-75d0144b3e44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Object\02.Monsertcharactor\03.PMCharactor">
+      <UniqueIdentifier>{67cb2dd5-895f-40ba-99c7-9e60c4c78acc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Object\02.Monsertcharactor\04.BMCharactor">
+      <UniqueIdentifier>{61a6cc8e-e953-485a-981d-84bc0fd0adab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Object\03.Mecharactor">
+      <UniqueIdentifier>{8e44313d-615c-403a-b6fb-2d43597313a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Object\04.score">
+      <UniqueIdentifier>{1c8c21b4-5da1-404e-8410-5061e5eec148}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03.scene">
+      <UniqueIdentifier>{dbdb502b-7b1b-4a03-8a40-6383e8edcacf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="소스.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Engine.cpp">
       <Filter>소스 파일\00.Engine</Filter>
     </ClCompile>
@@ -39,11 +72,41 @@
     <ClCompile Include="AnimationObject.cpp">
       <Filter>소스 파일\01.Object\01.AnimationObject</Filter>
     </ClCompile>
+    <ClCompile Include="scene.cpp">
+      <Filter>소스 파일\02.Sence</Filter>
+    </ClCompile>
+    <ClCompile Include="소스.cpp">
+      <Filter>소스 파일\00.main</Filter>
+    </ClCompile>
+    <ClCompile Include="Charactor.cpp">
+      <Filter>소스 파일\01.Object\02.Monsertcharactor\00.charactor</Filter>
+    </ClCompile>
+    <ClCompile Include="M1Charactor.cpp">
+      <Filter>소스 파일\01.Object\02.Monsertcharactor\01.RMCharator</Filter>
+    </ClCompile>
+    <ClCompile Include="PMCharactor.cpp">
+      <Filter>소스 파일\01.Object\02.Monsertcharactor\03.PMCharactor</Filter>
+    </ClCompile>
+    <ClCompile Include="YMCharactor.cpp">
+      <Filter>소스 파일\01.Object\02.Monsertcharactor\02.YMCharactor</Filter>
+    </ClCompile>
+    <ClCompile Include="BMCharactor.cpp">
+      <Filter>소스 파일\01.Object\02.Monsertcharactor\04.BMCharactor</Filter>
+    </ClCompile>
+    <ClCompile Include="pacman.cpp">
+      <Filter>소스 파일\01.Object\03.Mecharactor</Filter>
+    </ClCompile>
+    <ClCompile Include="score.cpp">
+      <Filter>소스 파일\01.Object\04.score</Filter>
+    </ClCompile>
+    <ClCompile Include="CharactorScene.cpp">
+      <Filter>소스 파일\03.scene</Filter>
+    </ClCompile>
+    <ClCompile Include="scoreScene.cpp">
+      <Filter>소스 파일\03.scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Engine.h">
       <Filter>소스 파일\00.Engine</Filter>
     </ClInclude>
@@ -52,6 +115,39 @@
     </ClInclude>
     <ClInclude Include="AnimationObject.h">
       <Filter>소스 파일\01.Object\01.AnimationObject</Filter>
+    </ClInclude>
+    <ClInclude Include="scene.h">
+      <Filter>소스 파일\02.Sence</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>소스 파일\00.main</Filter>
+    </ClInclude>
+    <ClInclude Include="Charactor.h">
+      <Filter>소스 파일\01.Object\02.Monsertcharactor\00.charactor</Filter>
+    </ClInclude>
+    <ClInclude Include="M1Charactor.h">
+      <Filter>소스 파일\01.Object\02.Monsertcharactor\01.RMCharator</Filter>
+    </ClInclude>
+    <ClInclude Include="PMCharactor.h">
+      <Filter>소스 파일\01.Object\02.Monsertcharactor\03.PMCharactor</Filter>
+    </ClInclude>
+    <ClInclude Include="YMCharactor.h">
+      <Filter>소스 파일\01.Object\02.Monsertcharactor\02.YMCharactor</Filter>
+    </ClInclude>
+    <ClInclude Include="BMCharactor.h">
+      <Filter>소스 파일\01.Object\02.Monsertcharactor\04.BMCharactor</Filter>
+    </ClInclude>
+    <ClInclude Include="pacman.h">
+      <Filter>소스 파일\01.Object\03.Mecharactor</Filter>
+    </ClInclude>
+    <ClInclude Include="score.h">
+      <Filter>소스 파일\01.Object\04.score</Filter>
+    </ClInclude>
+    <ClInclude Include="CharactorScene.h">
+      <Filter>소스 파일\03.scene</Filter>
+    </ClInclude>
+    <ClInclude Include="scoreScene.h">
+      <Filter>소스 파일\03.scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
