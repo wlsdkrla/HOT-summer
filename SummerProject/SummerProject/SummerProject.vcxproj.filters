@@ -105,6 +105,9 @@
     <ClCompile Include="scoreScene.cpp">
       <Filter>소스 파일\03.scene</Filter>
     </ClCompile>
+    <ClCompile Include="pacmenScene.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h">
@@ -148,6 +151,9 @@
     </ClInclude>
     <ClInclude Include="scoreScene.h">
       <Filter>소스 파일\03.scene</Filter>
+    </ClInclude>
+    <ClInclude Include="pacmenScene.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

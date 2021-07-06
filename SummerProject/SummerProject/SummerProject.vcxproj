@@ -156,6 +156,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="pacman.cpp" />
+    <ClCompile Include="pacmenScene.cpp" />
     <ClCompile Include="PMCharactor.cpp" />
     <ClCompile Include="scene.cpp" />
     <ClCompile Include="score.cpp" />
@@ -173,6 +174,7 @@
     <ClInclude Include="M1Charactor.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="pacman.h" />
+    <ClInclude Include="pacmenScene.h" />
     <ClInclude Include="PMCharactor.h" />
     <ClInclude Include="scene.h" />
     <ClInclude Include="score.h" />

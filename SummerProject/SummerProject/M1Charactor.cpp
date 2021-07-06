@@ -21,12 +21,15 @@ void M1Charactor::Init()
 		tx->loadFromFile(filepath);
 		this->vAnimation.push_back(tx);
 	}
+	setPosition(Vector2f(120.f, 0.f));
 }
 
 void M1Charactor::Destroy()
 {
+	Charactor::Destroy();
 }
 
 void M1Charactor::Update(const float& deltaTime)
 {
+	Charactor::Update(deltaTime);
 }

@@ -2,6 +2,7 @@
 #include "Engine.h"
 #include "CharactorScene.h"
 #include "scoreScene.h"
+#include "pacmenScene.h"
 
 Engine::Engine()
 {
@@ -59,7 +60,7 @@ void Engine::Input()
 			case Keyboard::A:
 			{
 				this->scenes.push(new CharactorScene);
-				cout << "캐릭터 화면" << endl;
+				cout << "몬스터 화면" << endl;
 				break;
 			}
 		
@@ -69,7 +70,12 @@ void Engine::Input()
 				cout << "점수 화면" << endl;
 				break;
 			}
-
+			case Keyboard::D:
+			{
+				this->scenes.push(new pacmenScene);
+				cout << "팩맨 화면" << endl;
+				break;
+			}
 			case Keyboard::Q: {
 				scenes.top()->EndScene();
 				break;

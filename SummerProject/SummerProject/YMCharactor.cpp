@@ -20,6 +20,7 @@ void YMCharactor::Init()
 		tx->loadFromFile(filepath);
 		this->vAnimation.push_back(tx);
 	}
+	setPosition(Vector2f(240.f, 0.f));
 }
 
 void YMCharactor::Destroy()
@@ -28,4 +29,5 @@ void YMCharactor::Destroy()
 
 void YMCharactor::Update(const float& deltaTime)
 {
+	Charactor::Update(deltaTime);
 }

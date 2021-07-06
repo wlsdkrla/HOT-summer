@@ -20,6 +20,7 @@ void PMCharactor::Init()
 		tx->loadFromFile(filepath);
 		this->vAnimation.push_back(tx);
 	}
+	setPosition(Vector2f(360.f, 0.f));
 }
 
 void PMCharactor::Destroy()
@@ -28,5 +29,6 @@ void PMCharactor::Destroy()
 
 void PMCharactor::Update(const float& deltaTime)
 {
+	Charactor::Update(deltaTime);
 }
 

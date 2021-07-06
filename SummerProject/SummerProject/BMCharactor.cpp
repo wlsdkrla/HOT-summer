@@ -19,6 +19,7 @@ void BMCharactor::Init()
 		tx->loadFromFile(filepath);
 		this->vAnimation.push_back(tx);
 	}
+	
 }
 
 void BMCharactor::Destroy()
@@ -27,5 +28,6 @@ void BMCharactor::Destroy()
 
 void BMCharactor::Update(const float& deltaTime)
 {
+	Charactor::Update(deltaTime);
 }
 
