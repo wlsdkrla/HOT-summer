@@ -1,11 +1,13 @@
 #pragma once
 #include "AnimationObject.h"
 
+
 class Charactor : public AnimationObject
 {
 public:
 	Charactor();
 	virtual ~Charactor();
+
 
 private:
 

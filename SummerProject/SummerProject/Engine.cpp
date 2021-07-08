@@ -19,13 +19,15 @@ void Engine::Init()
 
 	this->window = new RenderWindow(VideoMode(500, 500), "Window");
 	window->setMouseCursorVisible(true);
-	/*Image icon;
-	icon.loadFromFile("Texture/icon.png");
-	window->setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());*/
-
+	//Sprite sp;
+	/*Texture tx;
+	tx.loadFromFile("Textures/map/pacmap1.jpg");
+	sp.setTexture(tx);
+	sp.setPosition(0.f, 0.f);
+	sp.setOrigin(tx.getSize().x / 2.f, tx.getSize().y / 2.f);*/
+	
 	//아무것도 없는 장면
 	this->scenes.push(new Scene);
-
 
 
 
