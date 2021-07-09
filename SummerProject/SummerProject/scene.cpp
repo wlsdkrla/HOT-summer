@@ -32,6 +32,10 @@ void Scene::EndScene()
 	quit = true;
 }
 
+void Scene::Input(Event* e)
+{
+}
+
 void Scene::Update(const float& deltaTime)
 {
 
@@ -45,6 +49,9 @@ void Scene::Update(const float& deltaTime)
 
 void Scene::Render(RenderWindow* window)
 {
+	if (background) {
+		window->draw(*background);
+	}
 	for (auto& obj : vObjects)
 	{
 		window->draw(*obj);

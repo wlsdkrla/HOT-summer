@@ -145,6 +145,7 @@
     <ClCompile Include="AnimationObject.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="BackgroundObject.cpp" />
     <ClCompile Include="BMCharactor.cpp" />
     <ClCompile Include="Charactor.cpp" />
     <ClCompile Include="CharactorScene.cpp" />
@@ -152,6 +153,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="M1Charactor.cpp" />
+    <ClCompile Include="MapObject.cpp" />
     <ClCompile Include="Object.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>
@@ -166,12 +168,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimationObject.h" />
+    <ClInclude Include="BackgroundObject.h" />
     <ClInclude Include="BMCharactor.h" />
     <ClInclude Include="Charactor.h" />
     <ClInclude Include="CharactorScene.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="M1Charactor.h" />
+    <ClInclude Include="MapObject.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="pacman.h" />
     <ClInclude Include="pacmenScene.h" />

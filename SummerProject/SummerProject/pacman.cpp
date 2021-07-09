@@ -11,6 +11,7 @@ pacman::~pacman()
 }
 void pacman::Init()
 {
+	
 	Texture* tx = nullptr;
 	char filepath[50];
 	for (int i = 5; i < 6; ++i) {
@@ -26,6 +27,7 @@ void pacman::Init()
 		tx = new Texture;
 		tx->loadFromFile(filepath);
 		this->downAnimation.push_back(tx);
+		
 	}
 	for (int i = 13; i < 16; ++i) {
 		sprintf(filepath, "Textures/pacman/%d.jpg", i);
@@ -62,8 +64,10 @@ void pacman::Destroy()
 void pacman::Update(const float& deltaTime)
 {
 	state = STOP;
+	
 	if (Keyboard::isKeyPressed(Keyboard::Right)) {
 		state = RIGHT;
+		
 	}
 	else if (Keyboard::isKeyPressed(Keyboard::Left)) {
 		state = LEFT;

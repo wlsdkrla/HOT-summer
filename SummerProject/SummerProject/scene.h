@@ -1,3 +1,4 @@
+#include "BackgroundObject.h"
 #pragma once
 class Object;
 
@@ -10,6 +11,7 @@ public:
 
 protected:
 
+	Object* background = nullptr;
 
 	vector<Object*> vObjects;
 	stack<Scene*>* scenes;
@@ -23,6 +25,7 @@ private:
 public:
 	bool GetQuit() const;
 	void EndScene();
+	virtual void Input(Event* e);
 	virtual void Update(const float& deltaTime);
 	virtual void Render(RenderWindow* window);
 

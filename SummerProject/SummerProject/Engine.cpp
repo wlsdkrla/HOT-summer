@@ -1,9 +1,10 @@
-#include "framework.h"
+ï»¿#include "framework.h"
 #include "Engine.h"
 #include "CharactorScene.h"
 #include "scoreScene.h"
 #include "pacmenScene.h"
-
+#include "BackgroundObject.h"
+#include "MapObject.h"
 Engine::Engine()
 {
 	Init();
@@ -15,27 +16,17 @@ Engine::~Engine()
 
 void Engine::Init()
 {
-	// ÇöÀç window º¯¼ö´Â Æ÷ÀÎÅÍ·Î Á¸ÀçÇÑ´Ù.
+	// í˜„ìž¬ window ë³€ìˆ˜ëŠ” í¬ì¸í„°ë¡œ ì¡´ìž¬í•œë‹¤.
 
-	this->window = new RenderWindow(VideoMode(500, 500), "Window");
+	this->window = new RenderWindow(VideoMode(800, 800), "Window");
 	window->setMouseCursorVisible(true);
-	//Sprite sp;
-	/*Texture tx;
-	tx.loadFromFile("Textures/map/pacmap1.jpg");
-	sp.setTexture(tx);
-	sp.setPosition(0.f, 0.f);
-	sp.setOrigin(tx.getSize().x / 2.f, tx.getSize().y / 2.f);*/
-	
-	//¾Æ¹«°Íµµ ¾ø´Â Àå¸é
-	this->scenes.push(new Scene);
 
-
-
+	this->scenes.push(new MapObject);
 }
 
 void Engine::Destroy()
 {
-	// À©µµ¿ì°¡ nullptrÀÌ ¾Æ´Ï¶ó¸é
+	// ìœˆë„ìš°ê°€ nullptrì´ ì•„ë‹ˆë¼ë©´
 	if (window)
 	{
 		delete window;
@@ -57,25 +48,30 @@ void Engine::Input()
 		}
 		case Event::KeyPressed:
 		{
+			if (!scenes.empty())
+			{
+				scenes.top()->Input(&evt);
+			}
+
 			switch (evt.key.code)
 			{
 			case Keyboard::A:
 			{
 				this->scenes.push(new CharactorScene);
-				cout << "¸ó½ºÅÍ È­¸é" << endl;
+				cout << "ëª¬ìŠ¤í„° í™”ë©´" << endl;
 				break;
 			}
-		
+
 			case Keyboard::S:
 			{
 				this->scenes.push(new scoreScene);
-				cout << "Á¡¼ö È­¸é" << endl;
+				cout << "ì ìˆ˜ í™”ë©´" << endl;
 				break;
 			}
 			case Keyboard::D:
 			{
 				this->scenes.push(new pacmenScene);
-				cout << "ÆÑ¸Ç È­¸é" << endl;
+				cout << "íŒ©ë§¨ í™”ë©´" << endl;
 				break;
 			}
 			case Keyboard::Q: {
@@ -91,27 +87,27 @@ void Engine::Input()
 			break;
 		}
 	}
+}
 
 	// KeyBoardInput
-	if (Keyboard::isKeyPressed(Keyboard::Escape))
-	{
-		window->close();
-	}
+	//if (Keyboard::isKeyPressed(Keyboard::Escape))
+	//{
+	//	window->close();
+	//}
 
-	// Mouse Input
-	if (Mouse::isButtonPressed(Mouse::Left))
-	{
-		window->setTitle("Left Click");
-	}
-	else if (Mouse::isButtonPressed(Mouse::Right))
-	{
-		window->setTitle("Right Click");
-	}
-	else
-	{
-		window->setTitle("Window");
-	}
-}
+	//// Mouse Input
+	//if (Mouse::isButtonPressed(Mouse::Left))
+	//{
+	//	window->setTitle("Left Click");
+	//}
+	//else if (Mouse::isButtonPressed(Mouse::Right))
+	//{
+	//	window->setTitle("Right Click");
+	//}
+	//else
+	//{
+	//	window->setTitle("Window");
+	//}
 
 void Engine::Update()
 {
@@ -122,7 +118,7 @@ void Engine::Update()
 	if (!scenes.empty()) {
 		scenes.top()->Update(deltaTime);
 		if (this->scenes.top()->GetQuit()) {
-			// ÇöÀç ½ÇÇàÁßÀÎ scene Á¾·áÇÑ´Ù.
+			// í˜„ìž¬ ì‹¤í–‰ì¤‘ì¸ scene ì¢…ë£Œí•œë‹¤.
 
 			delete this->scenes.top();
 			this->scenes.pop();
@@ -133,6 +129,7 @@ void Engine::Update()
 		window->close();
 	}
 }
+
 
 void Engine::Render()
 {
