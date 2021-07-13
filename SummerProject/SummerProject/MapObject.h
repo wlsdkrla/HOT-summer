@@ -1,6 +1,6 @@
 #pragma once
 #include "framework.h"
-#include "Scene.h"
+#include "scene.h"
 class MapObject:public Scene
 {
 public:

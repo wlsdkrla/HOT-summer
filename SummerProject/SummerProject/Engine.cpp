@@ -20,8 +20,8 @@ void Engine::Init()
 
 	this->window = new RenderWindow(VideoMode(800, 800), "Window");
 	window->setMouseCursorVisible(true);
-
 	this->scenes.push(new MapObject);
+	
 }
 
 void Engine::Destroy()
@@ -32,7 +32,7 @@ void Engine::Destroy()
 		delete window;
 	}
 
-
+	
 }
 
 void Engine::Input()
@@ -57,6 +57,7 @@ void Engine::Input()
 			{
 			case Keyboard::A:
 			{
+				
 				this->scenes.push(new CharactorScene);
 				cout << "몬스터 화면" << endl;
 				break;
@@ -64,6 +65,7 @@ void Engine::Input()
 
 			case Keyboard::S:
 			{
+				
 				this->scenes.push(new scoreScene);
 				cout << "점수 화면" << endl;
 				break;

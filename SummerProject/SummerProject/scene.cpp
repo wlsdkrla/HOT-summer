@@ -1,5 +1,5 @@
 #include "framework.h"
-#include "Scene.h"
+#include "scene.h"
 #include "Object.h"
 
 Scene::Scene()

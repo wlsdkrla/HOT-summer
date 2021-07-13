@@ -1,6 +1,10 @@
 #include "framework.h"
 #include "MapObject.h"
 #include "Charactor.h"
+#include "pacman.h"
+#include "YMCharactor.h"
+#include "PMCharactor.h"
+#include "BMCharactor.h"
 #include "BackgroundObject.h"
 MapObject::MapObject()
 {
@@ -22,7 +26,10 @@ void MapObject::Init()
 	background = new BackgroundObject("Textures/map/pacmap1.jpg");
 	background->setScale(3.f, 3.f);
 	
-	
+	vObjects.push_back(new pacman);
+	vObjects.push_back(new YMCharactor);
+	vObjects.push_back(new PMCharactor);
+	//vObjects.push_back(new BMCharactor);
 }
 
 void MapObject::Input(Event* e)

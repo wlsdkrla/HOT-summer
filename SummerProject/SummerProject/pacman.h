@@ -1,4 +1,5 @@
 #include "Charactor.h"
+#include "scene.h"
 enum CHARACTOR_STATE {
 	//IDEL
 	STOP,
