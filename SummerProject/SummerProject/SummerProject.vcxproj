@@ -153,6 +153,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="M1Charactor.cpp" />
+    <ClCompile Include="maintitle.cpp" />
     <ClCompile Include="MapObject.cpp" />
     <ClCompile Include="Object.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
@@ -175,6 +176,7 @@
     <ClInclude Include="Engine.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="M1Charactor.h" />
+    <ClInclude Include="maintitle.h" />
     <ClInclude Include="MapObject.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="pacman.h" />

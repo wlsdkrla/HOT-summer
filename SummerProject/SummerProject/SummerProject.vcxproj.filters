@@ -108,10 +108,13 @@
     <ClCompile Include="pacmenScene.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="MapObject.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="BackgroundObject.cpp">
+      <Filter>소스 파일\99.common</Filter>
+    </ClCompile>
+    <ClCompile Include="MapObject.cpp">
+      <Filter>소스 파일\99.common</Filter>
+    </ClCompile>
+    <ClCompile Include="maintitle.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -161,10 +164,13 @@
     <ClInclude Include="pacmenScene.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="MapObject.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="BackgroundObject.h">
+      <Filter>소스 파일\99.common</Filter>
+    </ClInclude>
+    <ClInclude Include="MapObject.h">
+      <Filter>소스 파일\99.common</Filter>
+    </ClInclude>
+    <ClInclude Include="maintitle.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

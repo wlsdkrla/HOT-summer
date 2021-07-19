@@ -6,7 +6,7 @@ class MapObject:public Scene
 public:
 	MapObject();
 	MapObject(stack <Scene*>* scenes);
-	~MapObject();
+	virtual ~MapObject();
 
 private:
 	virtual void Init();

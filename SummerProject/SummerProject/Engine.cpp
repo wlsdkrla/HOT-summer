@@ -5,6 +5,7 @@
 #include "pacmenScene.h"
 #include "BackgroundObject.h"
 #include "MapObject.h"
+#include "maintitle.h"
 Engine::Engine()
 {
 	Init();
@@ -91,25 +92,6 @@ void Engine::Input()
 	}
 }
 
-	// KeyBoardInput
-	//if (Keyboard::isKeyPressed(Keyboard::Escape))
-	//{
-	//	window->close();
-	//}
-
-	//// Mouse Input
-	//if (Mouse::isButtonPressed(Mouse::Left))
-	//{
-	//	window->setTitle("Left Click");
-	//}
-	//else if (Mouse::isButtonPressed(Mouse::Right))
-	//{
-	//	window->setTitle("Right Click");
-	//}
-	//else
-	//{
-	//	window->setTitle("Window");
-	//}
 
 void Engine::Update()
 {
