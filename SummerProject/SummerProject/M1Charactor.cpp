@@ -1,5 +1,7 @@
 #include "framework.h"
 #include "M1Charactor.h"
+// TODO: 몬스터 캐릭터 랜덤 이동하기
+// 벽에 닿으면 방향 바꿔서 이동하기
 M1Charactor::M1Charactor()
 {
 	Init();
@@ -19,6 +21,7 @@ void M1Charactor::Init()
 		tx = new Texture;
 		tx->loadFromFile(filepath);
 		this->downAnimation.push_back(tx);
+		
 	}
 
 	for (int i = 3; i < 5; ++i) {
@@ -37,7 +40,7 @@ void M1Charactor::Init()
 		this->upAnimation.push_back(tx);
 	}
 	stateAnimation[GO] = goAnimation;
-	setPosition(Vector2f(120.f, 0.f));
+	setPosition(Vector2f(240.f, 0.f));
 }
 
 void M1Charactor::Destroy()
@@ -48,6 +51,7 @@ void M1Charactor::Destroy()
 void M1Charactor::Update(const float& deltaTime)
 {
 	state = GO;
+	move(0.04f, 0.f);
 	elapsedTime += deltaTime;
 
 	if (elapsedTime > 0.05f)

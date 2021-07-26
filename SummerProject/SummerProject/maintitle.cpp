@@ -7,7 +7,8 @@
 #include "BMCharactor.h"
 #include "BackgroundObject.h"
 #include "MapObject.h"
-
+//TODO: 맵 타이틀에서 엔터 누르면 바로 게임 시작하게 씬 연결하기
+//타이틀 사진 가운데 엔터 키 문구 생성
 maintitle::maintitle()
 {
 	Init();

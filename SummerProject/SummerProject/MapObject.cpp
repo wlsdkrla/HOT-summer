@@ -6,6 +6,8 @@
 #include "PMCharactor.h"
 #include "BMCharactor.h"
 #include "BackgroundObject.h"
+// TODO: 맵 충돌체크 하기
+// 맵 만들기, 맵 상에 있는 점들도 하나하나 충돌체크 처리해주기
 MapObject::MapObject()
 {
 	Init();

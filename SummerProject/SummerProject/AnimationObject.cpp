@@ -13,6 +13,7 @@ AnimationObject::~AnimationObject()
 void AnimationObject::Init()
 {
 	
+	
 
 }
 

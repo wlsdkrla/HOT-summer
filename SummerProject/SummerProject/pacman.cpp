@@ -1,5 +1,6 @@
 #include "framework.h"
 #include "pacman.h"
+//TODO: 캐릭터 충돌체크박스 만들기
 
 pacman::pacman()
 {
@@ -42,6 +43,7 @@ void pacman::Init()
 		tx = new Texture;
 		tx->loadFromFile(filepath);
 		this->rightAnimation.push_back(tx);
+		
 	}
 	for (int i = 10; i < 13; ++i) {
 		sprintf(filepath, "Textures/pacman/%d.jpg", i);
@@ -67,16 +69,20 @@ void pacman::Update(const float& deltaTime)
 	
 	if (Keyboard::isKeyPressed(Keyboard::Right)) {
 		state = RIGHT;
+		move(0.04f, 0.f);
 		
 	}
 	else if (Keyboard::isKeyPressed(Keyboard::Left)) {
 		state = LEFT;
+		move(-0.04f, 0.f);
 	}
 	else if (Keyboard::isKeyPressed(Keyboard::Up)) {
 		state = UP;
+		move(0.f, -0.04f);
 	}
 	else if (Keyboard::isKeyPressed(Keyboard::Down)) {
 		state = DOWN;
+		move(0.f, 0.04f);
 	}
 	elapsedTime += deltaTime;
 

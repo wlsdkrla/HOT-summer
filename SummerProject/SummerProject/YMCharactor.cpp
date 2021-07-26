@@ -19,8 +19,9 @@ void YMCharactor::Init()
 		tx = new Texture;
 		tx->loadFromFile(filepath);
 		this->vAnimation.push_back(tx);
+		
 	}
-	setPosition(Vector2f(240.f, 0.f));
+	//setPosition(Vector2f(240.f, 0.f));
 }
 
 void YMCharactor::Destroy()
